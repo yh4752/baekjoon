@@ -1,0 +1,16 @@
+#include<stdio.h>
+
+int main() {
+	int A, B; // 정수형 변수 A, B의 선언
+
+	scanf("%d", &A); // A 값 입력
+	scanf("%d", &B); // B 값 입력
+
+	
+	printf("%d\n", A * (B % 10)); // B의 일의 자리 수 구하고 A와 곱하기
+	printf("%d\n", A * ((B / 10) - ((B/ 100) * 10))); // B의 십의 자리 수 구하고 A와 곱하기
+	printf("%d\n", A * (B / 100)); // B의 백의 자리 수 구하고 A와 곱하기
+	printf("%d\n", A * B); // A와 B의 곱
+
+	return 0;
+}
