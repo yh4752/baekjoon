@@ -1,0 +1,11 @@
+#include<stdio.h>
+
+int main() {
+	int A, B; // 정수형 변수 A, B의 선언
+
+	scanf("%d %d", &A, &B); // A, B 값 입력
+
+	printf("%d", A + B); // A + B 의 값 출력
+
+	return 0;
+}
