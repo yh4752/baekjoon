@@ -1,0 +1,19 @@
+#include<stdio.h>
+
+int main() {
+	int A, B; // 정수형 변수 A, B의 선언
+
+	scanf("%d", &A, &B); // A 값 입력
+	
+	if (A > B) { // 만약 A > B라면
+		printf(">"); // < 를 출력해라
+	}
+	else if (A < B) { // 만약 A < B라면
+		printf("<"); // > 를 출력해라
+	}
+	else { // 만약 A == B라면
+		printf("=="); // == 를 출력해라
+	}
+
+	return 0;
+}
