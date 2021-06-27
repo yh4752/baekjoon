@@ -1,0 +1,25 @@
+#include<stdio.h>
+
+int main() {
+	int score; // 점수 입력 받을 변수 선언
+
+	scanf("%d", &score); // 점수 입력 받기
+
+	if (score >= 90 && score <= 100) { // 점수가 90 이상 100 이하라면
+		printf("A"); // A를 출력
+	}
+	else if (score >= 80) { // 점수가 80 이상이라면
+		printf("B"); // B를 출력
+	}
+	else if (score >= 70) { // 점수가 70 이상이라면
+		printf("C"); // C를 출력
+	}
+	else if (score >= 60) { // 점수가 60 이상이라면
+		printf("D"); // D를 출력
+	}
+	else { // 나머지 점수라면
+		printf("F"); // F를 출력
+	}
+
+	return 0;
+}
