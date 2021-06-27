@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+int main() {
+	int x, y;
+
+	scanf("%d", &x);
+	scanf("%d", &y);
+
+	if (x > 0) {
+		if (y > 0)  { // Quadrant 1
+			printf("1");
+		}
+		else { // Quadrant 4
+			printf("4");
+		}
+	}
+	else {
+		if (y > 0) { // Quadrant 2
+			printf("2");
+		}
+		else { // Quadrant 3
+			printf("3");
+		}
+	}
+
+	return 0;
+}
