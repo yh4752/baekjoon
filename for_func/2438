@@ -1,0 +1,16 @@
+#include<stdio.h>
+
+int main() {
+	int N; // 자연수 N 선언
+
+	scanf("%d", &N); // N 입력
+
+	for (int i = 1; i <= N; i++) { // 초기값 i가 1부터 시작해서 1씩 증가하며 N까지
+		for (int j = 1; j <= i;j++) { // 초기값 j가 i를 따라가서 반복한다.
+			printf("*"); // 별 출력
+		}
+		printf("\n"); // 줄 건너뛰기
+	}
+
+	return 0;
+}
