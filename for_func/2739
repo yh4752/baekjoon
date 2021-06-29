@@ -1,0 +1,13 @@
+#include<stdio.h>
+
+int main() {
+	int N; // 자연수 N 선언
+
+	scanf("%d", &N); // N 입력
+
+	for (int i = 1; i < 10; i++) { // 초기값 i가 1부터 시작해서 1씩 증가하며 9까지
+		printf("%d * %d = %d\n", N, i, N * i); // N과 i와 N x i의 값을 출력한다.
+	}
+
+	return 0;
+}
