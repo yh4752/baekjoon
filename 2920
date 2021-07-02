@@ -1,0 +1,34 @@
+#include <stdio.h>
+#pragma warning(disable:4996)
+
+int main()
+{
+    int tone[8]; // 입력 받을 음계들을 위해 정수형 배열 선언
+    int as_cnt = 0; // 오름차순 음계인지 확인하는 변수
+    int de_cnt = 0; // 내림차순 음계인지 확인하는 변수
+
+    for (int i = 0; i < 8; i++) { // i가 0부터 8까지 1씩 커질 때
+        scanf("%d", &tone[i]); // tone[i]번째 정수를 입력
+        if (tone[0] == 1) { // 만약 첫번째 값이 1이라면(오름차순 가능성)
+            if (tone[i] == i + 1) { // i번째 입력한 값이 i+1과 같으면
+                as_cnt++; // 오름차순 확인 변수에 1을 더한다
+            }
+        }
+        else if (tone[0] == 8) { // 만약 첫번째 값이 8이라면(내림차순 가능성)
+            if (tone[i] == 8 - i) { // i번째 입력한 값이 8-i와 같으면
+                de_cnt++; // 내림차순 확인 변수에 1을 더한다
+            }
+        }
+    }
+
+    if (as_cnt == 8) { // 오름차순 확인 변수가 8이면
+        printf("ascending");
+    }
+    else if (de_cnt == 8) { // 내림차순 확인 변수가 8이면
+        printf("descending");
+    }
+    else { // 둘 다 아니라면
+        printf("mixed");
+    }
+    return 0;
+}
