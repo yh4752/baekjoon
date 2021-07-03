@@ -1,0 +1,41 @@
+#include <stdio.h>
+#pragma warning(disable:4996)
+
+int main()
+{
+    int n; // 입력받을 정수형 변수 선언
+
+    while (1) { // 무한 while 문 -> if로 탈출 조건
+        int num[5]; // 입력 받을 정수를 각각 나누기 위해 배열 선언
+        int same_cnt = 0; // 서로 짝을 짓는 숫자가 같으면 카운트하는 변수
+        scanf("%d", &n); // 정수 n 입력
+        if (n == 0) { // 만약 0이면
+            break; // while문 탈출
+        }
+        int p; // 각 자리수 대입값
+        int num_cnt=0; // 자리수를 알기 위한 변수
+        for (int i = 0; i < 5; i++) { // i가 5인 이유는 최대 자리수가 5자리이기 때문
+            p = n % 10; // 한자리수 구하기
+            num[i] = p; // 그 값을 배열에 대입
+            n /= 10; // 한자리수를 사용했으니 나눠서 없애기
+            num_cnt++; // 그리고 자릿수 더하기
+            if (n == 0) // 만약 n이 0이 되었다면
+                break; // 반복문 탈출
+        }
+
+        for (int i = 0; i < num_cnt; i++) { // 자릿수만큼 반복
+            if (num[i] == num[num_cnt - i - 1]) { // 서로 마주보는 수(앞에서부터, 뒤에서부터)가 같으면
+                same_cnt++; // 카운트하기
+            }
+        }
+
+        if (same_cnt == num_cnt) { // 그래서 마주보는 수가 같을 때 카운트 한 값과 자릿수가 같으면
+            printf("yes\n"); // yes 출력
+        }
+        else {
+            printf("no\n"); // 그렇지 않다면 no 출력
+        }
+    }
+
+    return 0;
+}
